@@ -1,0 +1,28 @@
+:root {
+	--background: #F3F5FC;
+	--background-card: #FFFFFF;
+	--main-button-letters: #0A3871;
+	--secondary-button: #D8DFE8;
+	--secondary-letters: #495057;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 30px;
+	background: var(--background);
+}
+
+header {
+	width: 100%;
+}
+
+textarea {
+  width: 100%;
+	resize: none;
+}
