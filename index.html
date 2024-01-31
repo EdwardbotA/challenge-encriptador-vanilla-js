@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador - Chanllenge Alura</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
     <header>
@@ -24,28 +24,39 @@
           />Solo letras minúsculas y sin acentos
         </legend>
 
-        <button class="encrypt-btn btn">Encriptar</button>
-        <button class="dencrypt-btn btn">Desencriptar</button>
+        <div class="btn-container">
+          <button class="encrypt-btn btn">Encriptar</button>
+          <button class="dencrypt-btn btn">Desencriptar</button>
+        </div>
       </form>
 
       <section class="result-box">
-        <picture class="result-img">
-          <source srcset="./assets/img/Muñeco.svg" media="(min-width: 600px)" />
-          <img />
-        </picture>
+        <div class="result-text-container inactive">
+          <p>hola</p>
+          <button class="copy-btn btn">Copiar</button>
+        </div>
 
-        <h1>Ningún mensaje fue encontrado</h1>
+        <div class="result-none-container ">
+          <picture class="result-img" >
+            <source srcset="./assets/img/Muñeco.svg" media="(min-width: 600px)" />
+            <img />
+          </picture>
 
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-
-        <button class="copy-btn btn">Copiar</button>
+          <h1>Ningún mensaje fue encontrado</h1>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>Esta pagina fue desarrollada siguiedo el reto hecho por Alura Latam y ejecutado por Edward Botello</p>
-      <img src="./assets/img/github.svg" alt="github"><span>GitHub</span>
-      <img src="./assets/img/linkedin.svg" alt="linkedin"><span>linkedin</span>
+      <p>
+        Esta pagina fue desarrollada siguiedo el reto hecho por Alura Latam y
+        ejecutado por Edward Botello
+      </p>
+      <div class="social">
+        <a href="https://github.com/EdwardbotA/challenge-encriptador-vanilla-js"><img src="./assets/img/github.svg" alt="github" />GitHub</a>
+        <a href="/"><img src="./assets/img/linkedin.svg" alt="linkedin" />linkedin</a>
+      </div>
     </footer>
 
     <script src="./main.js"></script>
