@@ -38,6 +38,31 @@ main {
   grid-column: 1 /3;
 }
 
+dialog {
+  width: 300px;
+  border-radius: 32px;
+  border: none;
+  height: 120px;
+  color: var(--main-button-letters);
+  z-index: 2;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+  top: calc(50dvh - 60px);
+  left: calc(50% - 150px);
+  box-shadow: 0px 8px 10px 1px rgb(0, 0, 0, 0.2);
+}
+
+dialog button {
+  border-radius: 24px;
+  width: 30%;
+  font-size: 19px;
+  margin-top: 8px;
+  border: 1px solid var(--main-button-letters);
+  background-color: var(--main-button-letters);
+  color: var(--background);
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -49,16 +74,16 @@ form {
 }
 
 textarea {
-  width: 100%;
-  overflow: scroll;
-  text-overflow: ellipsis;
-  resize: none;
+  color: var(--main-button-letters);
   background: none;
   border: none;
   font-size: 32px;
-  min-height: 251px;
   max-height: fit-content;
-  color: var(--main-button-letters);
+  min-height: 251px;
+  overflow: auto;
+  resize: none;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 
 textarea::placeholder {
@@ -119,6 +144,11 @@ textarea:focus-visible {
   gap: 16px;
   box-shadow: 0px 8px 10px 1px rgb(0, 0, 0, 0.2);
   margin-bottom: 20px;
+  overflow: scroll;
+}
+
+.result-box::-webkit-scrollbar {
+  display: none;
 }
 
 .result-text-container {
@@ -132,9 +162,9 @@ textarea:focus-visible {
 }
 
 .result-text-container p {
+  overflow: scroll;
   font-size: 24px;
   width: 100%;
-  overflow: scroll;
 }
 
 .result-none-container {
@@ -210,7 +240,8 @@ footer {
   main {
     grid-template-columns: 1fr auto;
     column-gap: 12px;
-    height: 100%;
+    height: 70%;
+    min-height: 70vh;
   }
 
   form {
@@ -235,8 +266,11 @@ footer {
   .result-box {
     grid-column: 2 / 3;
     height: 70dvh;
+    min-height: 70dvb;
+    max-height: 70dvb;
     margin-bottom: 0;
     max-width: 400px;
+    min-width: 400px;
   }
 
   .result-img {

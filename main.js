@@ -1,6 +1,8 @@
 const textToWork = document.querySelector('textarea')
 const encryptBtn = document.querySelector('.encrypt-btn')
 const decryptBtn = document.querySelector('.decrypt-btn')
+const copyBtn = document.querySelector('.copy-btn')
+const modal = document.querySelector('dialog')
 const paragraphResult = document.querySelector('.result-text-container p')
 const infoPlaceholder = document.querySelector('.result-none-container')
 
@@ -50,6 +52,24 @@ function decrypt(e) {
   infoPlaceholder.classList.add('inactive')
 
 }
+
+async function copy() {
+  try {
+    await navigator.clipboard.writeText(paragraphResult.textContent);
+    
+    modal.setAttribute('open', true)
+
+    window.scrollTo(0, 0)
+
+    paragraphResult.parentElement.classList.add('inactive')
+    infoPlaceholder.classList.remove('inactive')
+    textToWork.value = ''
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+copyBtn.addEventListener('click', copy)
 
 encryptBtn.addEventListener('click', encrypt)
 decryptBtn.addEventListener('click', decrypt)
